@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="text1">
+        <item>前往自己的小宇宙</item>
+        <item>大便的时候你会想什么</item>
+        <item>我喜欢的电影海报</item>
+        <item>旅游摄像</item>
+        <item>不会发到朋友圈的照片</item>
+    </string-array>
+    <string-array name="text2">
+        <item>发现好玩的人，发现另一个你</item>
+        <item>和好玩的人一起开脑洞</item>
+        <item>电影，音乐，书，和朋友分享</item>
+        <item>收集，健身，写字，画画</item>
+        <item>厌倦了朋友圈，来点有趣的事</item>
+    </string-array>
+
+</resources>

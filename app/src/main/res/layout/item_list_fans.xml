@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <com.example.administrator.matchbox.weiget.CircleImageView
+        android:id="@+id/iv_headpic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/icon_register_avatar_default" />
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="评论内容" />
+        <ImageView
+            android:id="@+id/iv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/fl"
+        android:layout_toRightOf="@id/iv_headpic"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:textSize="@dimen/titleSize" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:src="@mipmap/icon_post_like"
+            android:textSize="@dimen/titleSubSize" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="时间"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+</RelativeLayout>

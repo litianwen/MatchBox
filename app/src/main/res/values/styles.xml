@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="MainActivityStyle" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="CursorDialogThemeNotTitle">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- 有title -->
+    <style name="CursorDialogNotFloatTheme">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="CursorDialogFullTheme" parent="CursorDialogNotFloatTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--没title -->
+    <style name="CursorDialogNotFloatNotTitileTheme" parent="CursorDialogThemeNotTitle">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="CursorDialogNotTitleFullTheme" parent="CursorDialogNotFloatNotTitileTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+</resources>

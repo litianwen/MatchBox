@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="登录"
+            android:textSize="@dimen/titleSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="注册" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/community_back" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_register_avatar_default" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TableRow>
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="国家" />
+
+                <TextView
+                    android:id="@+id/tv_countries"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_down"
+                    android:padding="10dp"
+                    android:text="中国" />
+
+            </TableRow>
+
+            <View
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/line_color" />
+
+            <TableRow>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+" />
+
+                    <EditText
+                        android:id="@+id/et_code"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ems="2"
+                        android:maxLength="4"
+                        android:text="86"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <RelativeLayout android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/et_phonenum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:digits="0123456789"
+                        android:hint="请输入登录手机号"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/et_phonenum"
+                        android:layout_alignTop="@id/et_phonenum"
+                        android:background="@color/line_color" />
+
+                    <ImageView
+                        android:id="@+id/iv_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/search_clear_normal"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <View
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/line_color" />
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/cb_password_vis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/password_selector" />
+
+            <ImageView
+                android:id="@+id/iv_clear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/cb_password_vis"
+                android:src="@mipmap/search_clear_normal"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            style="@style/BtnStyle"
+            android:layout_marginTop="10dp"
+            android:enabled="false"
+            android:text="登录" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="忘记了密码？" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.administrator.matchbox.ui.fragment.ThirdpartyLoginFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

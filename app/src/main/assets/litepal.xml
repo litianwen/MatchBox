@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="matchbox"></dbname>
+    <!-- 升级的时候 会删除所有的表 -->
+    <version value="3"></version>
+
+    <list>
+        <mapping class="com.example.administrator.matchbox.bean.TopicBean"></mapping>
+        <mapping class="com.example.administrator.matchbox.bean.UserBean"></mapping>
+        <mapping class="com.example.administrator.matchbox.bean.PushBean"></mapping>
+    </list>
+</litepal>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="创建话题"
+            android:textSize="@dimen/titleSubSize" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="分类"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/titleSubSize" />
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_cancel"
+            android:layout_toRightOf="@id/tv_title"
+            android:background="@drawable/search_shape2"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_search"
+                android:drawablePadding="10dp"
+                android:hint="输入话题名搜索"
+                android:padding="5dp"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/ptrsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/hint_color">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_slogan"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/slogan_back_selector" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/slogan_back_selector" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/slogan_back_selector" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/slogan_back_selector" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/slogan_back_selector" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.example.administrator.matchbox.weiget.ScrollExpandableListView
+                android:id="@+id/selv_topicList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:groupIndicator="@null" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>
